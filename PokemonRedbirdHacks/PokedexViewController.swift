@@ -11,10 +11,16 @@ import UIKit
 
 class PokedexViewController: UIViewController{
 
+
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false
-
+             
+        
+        
     }
 
 }

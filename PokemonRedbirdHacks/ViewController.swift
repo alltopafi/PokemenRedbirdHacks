@@ -40,7 +40,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
        
-        self.navigationController?.navigationBarHidden = true
+       // self.navigationController?.navigationBarHidden = true
         
         locationManager = CLLocationManager()
         locationManager.delegate = self

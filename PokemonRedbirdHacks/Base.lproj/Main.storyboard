@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pokemon Red(bird Hacks)-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="PokemonRedbirdHacks" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,19 +18,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="satellite" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zIh-9p-oBP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="630"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="566"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hql-6Z-mLJ">
                                 <rect key="frame" x="0.0" y="629" width="375" height="30"/>
                                 <state key="normal" title="View Pokedex"/>
                                 <connections>
-                                    <segue destination="DJz-NX-i1E" kind="show" id="9zQ-Ov-RIC"/>
+                                    <segue destination="bXg-oW-uV4" kind="show" id="qh3-9O-xXG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1Yk-dA-095"/>
+                    <navigationItem key="navigationItem" title="Pokemon Red(bird Hacks)" id="1Yk-dA-095"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -42,23 +42,46 @@
             <point key="canvasLocation" x="411.5" y="275.5"/>
         </scene>
         <!--Pokedex-->
-        <scene sceneID="ZTQ-zE-mef">
+        <scene sceneID="Jda-vP-caB">
             <objects>
-                <viewController storyboardIdentifier="PokedexViewController" title="Pokedex" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DJz-NX-i1E" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Pokedex" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bXg-oW-uV4" customClass="PokedexViewController" customModule="PokemonRedbirdHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Udy-1K-nZ2"/>
-                        <viewControllerLayoutGuide type="bottom" id="Gls-JD-eeD"/>
+                        <viewControllerLayoutGuide type="top" id="BBC-rb-qas"/>
+                        <viewControllerLayoutGuide type="bottom" id="1lT-np-nKx"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ijN-n7-2Jn">
+                    <view key="view" contentMode="scaleToFill" id="zi7-jb-L1r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0z8-pQ-Yqt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Srd-ca-sJ2">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Srd-ca-sJ2" id="ONx-9h-doe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Pokedex" id="D3c-hL-MWt">
+                        <barButtonItem key="backBarButtonItem" title="&lt; back" id="eMD-yB-WaK" userLabel="pokedexBackButton">
+                            <connections>
+                                <action selector="backButton:" destination="bXg-oW-uV4" id="kty-NC-8A0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nCS-qG-xUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ik-Vz-Egi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="452.5" y="1196.5"/>
+            <point key="canvasLocation" x="333.5" y="1231.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ulk-eo-A8d">
@@ -106,7 +129,7 @@
                                 <state key="normal" title="Pokeball"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cwx-xg-kWs">
-                                <rect key="frame" x="120" y="63" width="240" height="128"/>
+                                <rect key="frame" x="20" y="63" width="340" height="350"/>
                                 <accessibility key="accessibilityConfiguration" identifier="enemySprite"/>
                             </imageView>
                         </subviews>
@@ -114,6 +137,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="ip9-WO-PiJ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="cwx-xg-kWs" id="Org-wn-Ga2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GF6-Vr-OL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

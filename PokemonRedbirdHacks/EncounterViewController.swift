@@ -14,6 +14,7 @@ class EncounterViewController: UIViewController{
     var dataPassed:String!
     var locationString:String = ""
 
+    @IBOutlet weak var imageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,21 +26,27 @@ class EncounterViewController: UIViewController{
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         print(locationString)
+        
+        switch locationString {
+        case "everest":
+            imageView.image=UIImage(named: "everest")
+            break;
+        case "pompeii":
+            imageView.image=UIImage(named: "pompeii")
+            break;
+        case "japan":
+            imageView.image=UIImage(named: "japan")
+            break;
+        case "quad":
+            imageView.image=UIImage(named: "quad")
+            break;
+            
+        default:
+            break;
+        }
+        
+        
     }
     
-//    convenience init(locationString: String )
-//    {
-//        self.init()
-//        self.locationString = locationString
-//    }
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//    
-//    init(){
-////        super.init()
-//        super.init(nibName: nil, bundle: nil)
-//
-//    }
+
 }
