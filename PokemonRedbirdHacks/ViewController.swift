@@ -11,9 +11,10 @@ import MapKit
 import CoreLocation
 import CoreMotion
 
+
 var stepCounter:Int = 0
-
-
+var randomNumInt = arc4random()%20
+var locationString:String = ""
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -39,6 +40,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
        
+        self.navigationController?.navigationBarHidden = true
+        
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -69,8 +72,33 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,200, 200)
-      
+        print(stepCounter)
+        
         mapView.setRegion(coordinateRegion, animated: true)
+        
+        if(stepCounter == Int(randomNumInt)){
+            print("yes things are going on")
+            print(stepCounter)
+            
+            
+            
+            
+            //encounter happens!
+            
+
+            let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            
+            if let VC = storyBoard.instantiateViewControllerWithIdentifier("EncounterViewController") as? EncounterViewController {
+                VC.locationString = locationString
+                self.navigationController?.pushViewController(VC, animated: true)
+            }
+
+            
+            
+            
+        }
+        stepCounter += 1
+        
     }
 
 
@@ -83,7 +111,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func regionMonitoring(sender: AnyObject) {
         locationManager.requestAlwaysAuthorization()
-        
+       
 //        let currRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 40.81150, longitude: 14.42753), radius: 10, identifier: "Home")
 //        locationManager.startMonitoringForRegion(currRegion)
         
@@ -92,11 +120,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didEnterRegion currRegion: CLRegion) {
 //        NSLog("Entering region")
 //        print(currRegion.identifier)
-
-        let pedometer = CMPedometer()
+          stepCounter=0
+          randomNumInt = arc4random()%20
+            print("step counter: ",stepCounter)
+            print("random numnber: ",Int(randomNumInt))
         
-        pedometer.startPedometerUpdatesFromDate(<#T##start: NSDate##NSDate#>, withHandler: <#T##CMPedometerHandler##CMPedometerHandler##(CMPedometerData?, NSError?) -> Void#>)
-
+        locationString = currRegion.identifier
         
     }
     
@@ -115,12 +144,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     //encounter system
     
-    
-    
-    
-    
-    
-    
+    func encounterHappens(){
+        
+    }
     
     
 }
