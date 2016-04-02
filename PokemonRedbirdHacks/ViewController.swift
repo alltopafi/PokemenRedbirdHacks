@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreMotion
 
 var stepCounter:Int = 0
 
@@ -91,6 +92,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didEnterRegion currRegion: CLRegion) {
 //        NSLog("Entering region")
 //        print(currRegion.identifier)
+
+        let pedometer = CMPedometer()
+        
+        pedometer.startPedometerUpdatesFromDate(<#T##start: NSDate##NSDate#>, withHandler: <#T##CMPedometerHandler##CMPedometerHandler##(CMPedometerData?, NSError?) -> Void#>)
 
         
     }
