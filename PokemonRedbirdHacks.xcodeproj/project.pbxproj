@@ -15,7 +15,10 @@
 		881BE6CC1CAF5D95009B2AD5 /* PokemonRedbirdHacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881BE6CB1CAF5D95009B2AD5 /* PokemonRedbirdHacksTests.swift */; };
 		881BE6D71CAF5D95009B2AD5 /* PokemonRedbirdHacksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881BE6D61CAF5D95009B2AD5 /* PokemonRedbirdHacksUITests.swift */; };
 		881BE6E51CAF6072009B2AD5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 881BE6E41CAF6072009B2AD5 /* MapKit.framework */; };
-		881BE6E91CB020B2009B2AD5 /* exampleLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 881BE6E81CB020B2009B2AD5 /* exampleLocation.gpx */; };
+		882A27DB1CB025360005A873 /* ISUQuad.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 882A27DA1CB025360005A873 /* ISUQuad.gpx */; };
+		882A27E01CB027570005A873 /* Gamefreak-Japan.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 882A27DD1CB027570005A873 /* Gamefreak-Japan.gpx */; };
+		882A27E41CB02C400005A873 /* Mt-Everest.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 882A27E21CB02C400005A873 /* Mt-Everest.gpx */; };
+		882A27E51CB02C400005A873 /* Volcano-Pompeii.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 882A27E31CB02C400005A873 /* Volcano-Pompeii.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +53,10 @@
 		881BE6D61CAF5D95009B2AD5 /* PokemonRedbirdHacksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRedbirdHacksUITests.swift; sourceTree = "<group>"; };
 		881BE6D81CAF5D95009B2AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		881BE6E41CAF6072009B2AD5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		881BE6E81CB020B2009B2AD5 /* exampleLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = exampleLocation.gpx; sourceTree = "<group>"; };
+		882A27DA1CB025360005A873 /* ISUQuad.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ISUQuad.gpx; sourceTree = "<group>"; };
+		882A27DD1CB027570005A873 /* Gamefreak-Japan.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Gamefreak-Japan.gpx"; sourceTree = "<group>"; };
+		882A27E21CB02C400005A873 /* Mt-Everest.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Mt-Everest.gpx"; sourceTree = "<group>"; };
+		882A27E31CB02C400005A873 /* Volcano-Pompeii.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Volcano-Pompeii.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +88,10 @@
 		881BE6AA1CAF5D95009B2AD5 = {
 			isa = PBXGroup;
 			children = (
-				881BE6E81CB020B2009B2AD5 /* exampleLocation.gpx */,
+				882A27E21CB02C400005A873 /* Mt-Everest.gpx */,
+				882A27E31CB02C400005A873 /* Volcano-Pompeii.gpx */,
+				882A27DD1CB027570005A873 /* Gamefreak-Japan.gpx */,
+				882A27DA1CB025360005A873 /* ISUQuad.gpx */,
 				881BE6E41CAF6072009B2AD5 /* MapKit.framework */,
 				881BE6B51CAF5D95009B2AD5 /* PokemonRedbirdHacks */,
 				881BE6CA1CAF5D95009B2AD5 /* PokemonRedbirdHacksTests */,
@@ -244,9 +253,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882A27DB1CB025360005A873 /* ISUQuad.gpx in Resources */,
+				882A27E41CB02C400005A873 /* Mt-Everest.gpx in Resources */,
+				882A27E51CB02C400005A873 /* Volcano-Pompeii.gpx in Resources */,
 				881BE6C11CAF5D95009B2AD5 /* LaunchScreen.storyboard in Resources */,
-				881BE6E91CB020B2009B2AD5 /* exampleLocation.gpx in Resources */,
 				881BE6BE1CAF5D95009B2AD5 /* Assets.xcassets in Resources */,
+				882A27E01CB027570005A873 /* Gamefreak-Japan.gpx in Resources */,
 				881BE6BC1CAF5D95009B2AD5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +510,7 @@
 				881BE6DD1CAF5D95009B2AD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		881BE6DE1CAF5D95009B2AD5 /* Build configuration list for PBXNativeTarget "PokemonRedbirdHacksTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +519,7 @@
 				881BE6E01CAF5D95009B2AD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		881BE6E11CAF5D95009B2AD5 /* Build configuration list for PBXNativeTarget "PokemonRedbirdHacksUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +528,7 @@
 				881BE6E31CAF5D95009B2AD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
