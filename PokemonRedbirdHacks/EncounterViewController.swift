@@ -40,6 +40,7 @@ class EncounterViewController: UIViewController{
             break;
         case "quad":
             imageView.image=UIImage(named: "quad")
+            savePokemon("quad", caught: true)
             break;
             
         default:
@@ -50,27 +51,56 @@ class EncounterViewController: UIViewController{
         
         
         
+    }
+    
+    
+    
+    
+    func savePokemon(name:String, caught:Bool){
+        let newPoke = pokemon(name: name,caught: caught)
+        let pokemonData = NSUserDefaults.standardUserDefaults().objectForKey("pokemon") as? NSData
         
-        
-        if(caught){
-
-            let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setObject("Coding Explorer", forKey: "userNameKey")
-            
-            
-//            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//            [defaults setInteger:9001 forKey:@"HighScore"];
-//            [defaults synchronize];
-            
-            
-            
+        if let pokemonData = pokemonData {
+            var pokemonArray = NSKeyedUnarchiver.unarchiveObjectWithData(pokemonData) as? [pokemon]
+            pokemonArray?.append(newPoke)
+            let pokemonArray2 = NSKeyedArchiver.archivedDataWithRootObject(pokemonArray!)
+            NSUserDefaults.standardUserDefaults().setObject(pokemonArray2, forKey: "pokemon")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            print(pokemonArray)
             
         }
         
         
         
         
+        
+//        let newPoke = pokemon(name: name,caught: caught)
+//        var pokemonArray = NSUserDefaults.standardUserDefaults().objectForKey("pokemon") as? [pokemon]
+////        if let pokemonData = NSUserDefaults.standardUserDefaults().objectForKey("pokemon") as? NSData{
+////            
+////            if var pokemonArray = NSKeyedUnarchiver.unarchiveObjectWithData(pokemonData) as? [pokemon] {
+////                
+//        
+//        pokemonArray?.append(newPoke)
+//                NSUserDefaults.standardUserDefaults().setObject(pokemonArray, forKey: "pokemon")
+//                NSUserDefaults.standardUserDefaults().synchronize()
+////            }
+////            
+//        }
     }
+    
+//        var pokemonArray  = [pokemon]()
+//        pokemonArray.append(newPoke)
+//        
+//        //error here
+//        //let pokemonData = NSKeyedArchiver.archivedDataWithRootObject(pokemonArray)
+//        let myData = NSKeyedArchiver.archivedDataWithRootObject(newPoke)
+//        NSUserDefaults.standardUserDefaults().setObject(myData, forKey: "pokemon")
+
+        
+        //print("here -------------")
+        //NSUserDefaults.standardUserDefaults().setObject(pokemonData, forKey: "pokemon")
+    
     
 
 }

@@ -15,7 +15,6 @@ import CoreMotion
 var stepCounter:Int = 0
 var randomNumInt = arc4random()%20
 var locationString:String = ""
-var arrayPokemonCaught  = [String]()
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 

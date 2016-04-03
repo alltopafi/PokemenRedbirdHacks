@@ -21,8 +21,8 @@
 		882A27E51CB02C400005A873 /* Volcano-Pompeii.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 882A27E31CB02C400005A873 /* Volcano-Pompeii.gpx */; };
 		882A27E71CB040240005A873 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882A27E61CB040240005A873 /* CoreLocation.framework */; };
 		882A27EB1CB06D180005A873 /* EncounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A27EA1CB06D180005A873 /* EncounterViewController.swift */; };
-		882A27ED1CB07CA90005A873 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A27EC1CB07CA90005A873 /* PokedexViewController.swift */; };
 		882A27EF1CB097B30005A873 /* pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A27EE1CB097B30005A873 /* pokemon.swift */; };
+		882A27F41CB0A6B60005A873 /* PokedexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A27F21CB0A6B60005A873 /* PokedexTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +63,8 @@
 		882A27E31CB02C400005A873 /* Volcano-Pompeii.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Volcano-Pompeii.gpx"; sourceTree = "<group>"; };
 		882A27E61CB040240005A873 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		882A27EA1CB06D180005A873 /* EncounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterViewController.swift; sourceTree = "<group>"; };
-		882A27EC1CB07CA90005A873 /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 		882A27EE1CB097B30005A873 /* pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pokemon.swift; sourceTree = "<group>"; };
+		882A27F21CB0A6B60005A873 /* PokedexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +130,8 @@
 				881BE6BF1CAF5D95009B2AD5 /* LaunchScreen.storyboard */,
 				881BE6C21CAF5D95009B2AD5 /* Info.plist */,
 				882A27EA1CB06D180005A873 /* EncounterViewController.swift */,
-				882A27EC1CB07CA90005A873 /* PokedexViewController.swift */,
 				882A27EE1CB097B30005A873 /* pokemon.swift */,
+				882A27F21CB0A6B60005A873 /* PokedexTableViewController.swift */,
 			);
 			path = PokemonRedbirdHacks;
 			sourceTree = "<group>";
@@ -300,9 +300,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882A27F41CB0A6B60005A873 /* PokedexTableViewController.swift in Sources */,
 				882A27EB1CB06D180005A873 /* EncounterViewController.swift in Sources */,
 				882A27EF1CB097B30005A873 /* pokemon.swift in Sources */,
-				882A27ED1CB07CA90005A873 /* PokedexViewController.swift in Sources */,
 				881BE6B91CAF5D95009B2AD5 /* ViewController.swift in Sources */,
 				881BE6B71CAF5D95009B2AD5 /* AppDelegate.swift in Sources */,
 			);

@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let pokemonData = NSUserDefaults.standardUserDefaults().objectForKey("pokemon") as? NSData
+        if let pokemonData = pokemonData {
+        
+        }else{
+            let pokemonArray = NSKeyedArchiver.archivedDataWithRootObject([])
+            NSUserDefaults.standardUserDefaults().setObject(pokemonArray, forKey: "pokemon")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            
+        }
         return true
     }
 
