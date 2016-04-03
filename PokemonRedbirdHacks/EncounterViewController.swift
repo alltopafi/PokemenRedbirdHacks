@@ -13,6 +13,7 @@ class EncounterViewController: UIViewController{
     
     var dataPassed:String!
     var locationString:String = ""
+    var caught:Bool = false
 
     @IBOutlet weak var imageView: UIImageView!
 
@@ -44,6 +45,26 @@ class EncounterViewController: UIViewController{
         default:
             break;
         }
+        
+        
+        
+        
+        
+        
+        
+        if(caught){
+
+            
+//            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//            [defaults setInteger:9001 forKey:@"HighScore"];
+//            [defaults synchronize];
+            
+            
+            
+            
+        }
+        
+        
         
         
     }
