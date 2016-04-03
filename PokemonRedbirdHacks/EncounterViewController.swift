@@ -54,6 +54,9 @@ class EncounterViewController: UIViewController{
         
         if(caught){
 
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject("Coding Explorer", forKey: "userNameKey")
+            
             
 //            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 //            [defaults setInteger:9001 forKey:@"HighScore"];
