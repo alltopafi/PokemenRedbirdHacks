@@ -23,6 +23,7 @@
 		882A27EB1CB06D180005A873 /* EncounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A27EA1CB06D180005A873 /* EncounterViewController.swift */; };
 		882A27EF1CB097B30005A873 /* pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A27EE1CB097B30005A873 /* pokemon.swift */; };
 		882A27F41CB0A6B60005A873 /* PokedexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A27F21CB0A6B60005A873 /* PokedexTableViewController.swift */; };
+		882A27F71CB0DC760005A873 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 882A27F61CB0DC760005A873 /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		882A27EA1CB06D180005A873 /* EncounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterViewController.swift; sourceTree = "<group>"; };
 		882A27EE1CB097B30005A873 /* pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pokemon.swift; sourceTree = "<group>"; };
 		882A27F21CB0A6B60005A873 /* PokedexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexTableViewController.swift; sourceTree = "<group>"; };
+		882A27F61CB0DC760005A873 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = ../../../../../Downloads/images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		881BE6B51CAF5D95009B2AD5 /* PokemonRedbirdHacks */ = {
 			isa = PBXGroup;
 			children = (
+				882A27F61CB0DC760005A873 /* images */,
 				881BE6B61CAF5D95009B2AD5 /* AppDelegate.swift */,
 				881BE6B81CAF5D95009B2AD5 /* ViewController.swift */,
 				881BE6BA1CAF5D95009B2AD5 /* Main.storyboard */,
@@ -273,6 +276,7 @@
 				882A27E41CB02C400005A873 /* Mt-Everest.gpx in Resources */,
 				882A27E51CB02C400005A873 /* Volcano-Pompeii.gpx in Resources */,
 				881BE6C11CAF5D95009B2AD5 /* LaunchScreen.storyboard in Resources */,
+				882A27F71CB0DC760005A873 /* images in Resources */,
 				881BE6BE1CAF5D95009B2AD5 /* Assets.xcassets in Resources */,
 				882A27E01CB027570005A873 /* Gamefreak-Japan.gpx in Resources */,
 				881BE6BC1CAF5D95009B2AD5 /* Main.storyboard in Resources */,

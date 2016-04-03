@@ -19,6 +19,7 @@ class EncounterViewController: UIViewController{
     var caught:Bool = false
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var throwView: UIImageView!
 
     @IBAction func pokeball(sender: AnyObject) {
         caught = true
@@ -97,6 +98,15 @@ class EncounterViewController: UIViewController{
     
     @IBAction func throwRockButton(sender: AnyObject) {
     
+        throwView.animationImages = [
+            UIImage(named: "images/rock1.png")!,
+            UIImage(named: "images/rock2.png")!,
+            UIImage(named: "images/rock3.png")!
+        ]
+        
+        throwView.animationDuration = 2
+        throwView.animationRepeatCount = 1
+        throwView.startAnimating()
        
         catchRate = catchRate + 10
         fleeRate = fleeRate + 5
@@ -134,11 +144,15 @@ class EncounterViewController: UIViewController{
     @IBAction func baitButton(sender: AnyObject) {
         
         
+        throwView.animationImages = [
+            UIImage(named: "images/food1.png")!,
+            UIImage(named: "images/food2.png")!,
+            UIImage(named: "images/food3.png")!
+        ]
         
-        
-        
-        
-        
+        throwView.animationDuration = 2
+        throwView.animationRepeatCount = 1
+        throwView.startAnimating()
         
         
         catchRate = catchRate - 10
@@ -171,7 +185,7 @@ class EncounterViewController: UIViewController{
             
         }
 
-        
+
     }
     
     
@@ -277,7 +291,6 @@ class EncounterViewController: UIViewController{
         let alert = UIAlertController(title: title, message: error, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
             self.navigationController?.popToRootViewControllerAnimated(true)
-//(true, completion: nil)
         }))
         self.presentViewController(alert, animated: true, completion: nil)
         

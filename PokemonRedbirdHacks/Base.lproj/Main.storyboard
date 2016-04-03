@@ -127,8 +127,11 @@
                                     <action selector="pokeball:" destination="l2U-pf-lyg" eventType="touchUpInside" id="Pgm-Zj-BCO"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oeQ-h6-4il">
+                                <rect key="frame" x="20" y="207" width="335" height="318"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cwx-xg-kWs">
-                                <rect key="frame" x="20" y="63" width="340" height="350"/>
+                                <rect key="frame" x="121" y="63" width="239" height="136"/>
                                 <accessibility key="accessibilityConfiguration" identifier="enemySprite"/>
                             </imageView>
                         </subviews>
@@ -138,6 +141,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="imageView" destination="cwx-xg-kWs" id="Org-wn-Ga2"/>
+                        <outlet property="throwView" destination="oeQ-h6-4il" id="G9r-As-3GH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GF6-Vr-OL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
