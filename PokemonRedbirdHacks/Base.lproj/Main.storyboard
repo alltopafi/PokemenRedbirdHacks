@@ -102,14 +102,23 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pw1-dj-wm4">
                                 <rect key="frame" x="67" y="583" width="63" height="30"/>
                                 <state key="normal" title="Bait"/>
+                                <connections>
+                                    <action selector="baitButton:" destination="l2U-pf-lyg" eventType="touchUpInside" id="gFf-Cj-phl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgf-3P-F8X">
                                 <rect key="frame" x="241" y="583" width="82" height="30"/>
                                 <state key="normal" title="Throw rock"/>
+                                <connections>
+                                    <action selector="throwRockButton:" destination="l2U-pf-lyg" eventType="touchUpInside" id="dYd-C6-3pa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LC5-th-lqr">
                                 <rect key="frame" x="155" y="583" width="65" height="30"/>
                                 <state key="normal" title="Run"/>
+                                <connections>
+                                    <action selector="runButton:" destination="l2U-pf-lyg" eventType="touchUpInside" id="vAI-3v-qbl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erw-tP-eUe">
                                 <rect key="frame" x="94" y="514" width="196" height="30"/>

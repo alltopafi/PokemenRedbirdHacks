@@ -10,7 +10,10 @@ import Foundation
 import UIKit
 
 class EncounterViewController: UIViewController{
-    
+    var catchRate:Int = 60
+    var fleeRate:Int = 30
+    var randomFlee = arc4random()%100 + 1
+    var randomNumInt = arc4random()%100 + 1
     var dataPassed:String!
     var locationString:String = ""
     var caught:Bool = false
@@ -21,20 +24,61 @@ class EncounterViewController: UIViewController{
         caught = true
         switch(locationString){
         case "everest":
-            savePokemon("Articuno", caught: true)
-            displayAlert("Catch 'em All", error: "Articuno was caught!")
+            //print("random is: ",Int(randomNumInt))
+            if(Int(randomNumInt)<=catchRate){
+                savePokemon("Articuno", caught: true)
+                displayAlert("Catch 'em All", error: "Articuno was caught!")
+            }else{
+                print("catch num: ", randomNumInt)
+                randomNumInt = arc4random()%100
+                if(Int(randomFlee)<=fleeRate)
+                {
+                    displayAlert("Whoops!",error: "Articuno got away.")
+                }
+                Alert.Warning(self, message: "Articuno was not caught.")
+            }
             break;
         case "pompeii":
-            savePokemon("Moltres", caught: true)
-            displayAlert("Catch 'em All", error: "Moltres was caught!")
+            if(Int(randomNumInt)<=catchRate){
+                savePokemon("Moltres", caught: true)
+                displayAlert("Catch 'em All", error: "Moltres was caught!")
+            }else{
+                print("catch num: ", randomNumInt)
+                randomNumInt = arc4random()%100
+                if(Int(randomFlee)<=fleeRate)
+                {
+                    displayAlert("Whoops!",error: "Moltres got away.")
+                }
+                Alert.Warning(self, message: "Moltres was not caught.")
+            }
             break;
         case "japan":
-            savePokemon("GoldenDragonPirate", caught: true)
-            displayAlert("Catch 'em All", error: "GoldenDragonPirate was caught!")
+            if(Int(randomNumInt)<=catchRate*2){
+                savePokemon("GoldenDragonPirate", caught: true)
+                displayAlert("Catch 'em All", error: "GoldenDragonPirate was caught!")
+            }else{
+                print("catch num: ", randomNumInt)
+                randomNumInt = arc4random()%100
+                if(Int(randomFlee)<=fleeRate)
+                {
+                    displayAlert("Whoops!",error: "GoldenDragonPirate got away.")
+                }
+                Alert.Warning(self, message: "GoldenDragonPirate was not caught.")
+            }
             break;
         case "quad":
-            savePokemon("Snorlax", caught: true)
-            displayAlert("Catch 'em All", error: "Snorlax was caught!")
+            if(Int(randomNumInt)<=catchRate/2){
+                savePokemon("Snorlax", caught: true)
+                displayAlert("Catch 'em All", error: "Snorlax was caught!")
+            }else{
+                print("catch num: ", randomNumInt)
+                randomNumInt = arc4random()%100
+                if(Int(randomFlee)<=fleeRate)
+                {
+                    displayAlert("Whoops!",error: "Snorlax got away.")
+                }
+                Alert.Warning(self, message: "Snorlax was not caught.")
+            }
             break;
             
         default:
@@ -44,9 +88,97 @@ class EncounterViewController: UIViewController{
         //transition back to map
         
 
+    }
+    
+    @IBAction func runButton(sender: AnyObject) {
+        displayAlert("Flee!",error: "You got away!")
+        
+    }
+    
+    @IBAction func throwRockButton(sender: AnyObject) {
+    
+       
+        catchRate = catchRate + 10
+        fleeRate = fleeRate + 5
+        randomFlee = arc4random()%100 + 1
+        print("rock throw flee: ",Int(randomFlee))
+        if(Int(randomFlee)<=fleeRate)
+        {
+            
+            switch locationString {
+            case "everest":
+                displayAlert("Whoops!", error: "Sorry Articuno got away.")
+                break;
+            case "pompeii":
+                displayAlert("Whoops!", error: "Sorry Moltres got away.")
+                break;
+            case "japan":
+                displayAlert("Whoops!", error: "Sorry GoldenDragonPirate got away.")
+                break;
+            case "quad":
+                displayAlert("Whoops!", error: "Sorry Snorlax got away.")
+                break;
+                
+            default:
+                break;
+            }
+            
+            
+        }
+
+        
         
         
     }
+    
+    @IBAction func baitButton(sender: AnyObject) {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        catchRate = catchRate - 10
+        fleeRate = fleeRate - 5
+        randomFlee = arc4random()%100 + 1
+        print("fleeRate is: ",fleeRate)
+        print("roll is: ",Int(randomFlee))
+       
+        if(Int(randomFlee)<=fleeRate)
+        {
+            
+            switch (locationString) {
+            case "everest":
+                displayAlert("Whoops!", error: "Sorry Articuno got away.")
+                break;
+            case "pompeii":
+                displayAlert("Whoops!", error: "Sorry Moltres got away.")
+                break;
+            case "japan":
+                displayAlert("Whoops!", error: "Sorry GoldenDragonPirate got away.")
+                break;
+            case "quad":
+                displayAlert("Whoops!", error: "Sorry Snorlax got away.")
+                break;
+                
+            default:
+                break;
+            }
+            
+            
+        }
+
+        
+    }
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -128,15 +260,15 @@ class EncounterViewController: UIViewController{
         
     }
     
-//    internal class Alert: NSObject {
-//        
-//        class func Warning(delegate: UIViewController, message: String) {
-//            let alert = UIAlertController(title: "Warning", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-//            delegate.presentViewController(alert, animated: true, completion: nil)
-//        }
-//        
-//    }
+    internal class Alert: NSObject {
+        
+        class func Warning(delegate: UIViewController, message: String) {
+            let alert = UIAlertController(title: "Warning", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            delegate.presentViewController(alert, animated: true, completion: nil)
+        }
+        
+    }
     
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()

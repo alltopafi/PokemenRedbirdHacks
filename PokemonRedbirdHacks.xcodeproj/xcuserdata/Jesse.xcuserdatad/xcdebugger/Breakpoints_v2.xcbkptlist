@@ -10,28 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PokemonRedbirdHacks/EncounterViewController.swift"
-            timestampString = "481346368.325773"
+            timestampString = "481350019.641415"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "displayAlert(_:error:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PokemonRedbirdHacks/EncounterViewController.swift"
-            timestampString = "481346368.325773"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "pokeball(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
