@@ -26,6 +26,15 @@ class EncounterViewController: UIViewController{
         switch(locationString){
         case "everest":
             //print("random is: ",Int(randomNumInt))
+            throwView.animationImages = [
+                UIImage(named: "images/poke1.png")!,
+                UIImage(named: "images/poke2.png")!,
+                UIImage(named: "images/poke3.png")!
+            ]
+            
+            throwView.animationDuration = 2
+            throwView.animationRepeatCount = 1
+            throwView.startAnimating()
             if(Int(randomNumInt)<=catchRate){
                 savePokemon("Articuno", caught: true)
                 displayAlert("Catch 'em All", error: "Articuno was caught!")
@@ -40,7 +49,17 @@ class EncounterViewController: UIViewController{
             }
             break;
         case "pompeii":
+            throwView.animationImages = [
+                UIImage(named: "images/poke1.png")!,
+                UIImage(named: "images/poke2.png")!,
+                UIImage(named: "images/poke3.png")!
+            ]
+            
+            throwView.animationDuration = 2
+            throwView.animationRepeatCount = 1
+            throwView.startAnimating()
             if(Int(randomNumInt)<=catchRate){
+
                 savePokemon("Moltres", caught: true)
                 displayAlert("Catch 'em All", error: "Moltres was caught!")
             }else{
@@ -54,6 +73,16 @@ class EncounterViewController: UIViewController{
             }
             break;
         case "japan":
+            throwView.animationImages = [
+                UIImage(named: "images/poke1.png")!,
+                UIImage(named: "images/poke2.png")!,
+                UIImage(named: "images/poke3.png")!
+            ]
+            
+            throwView.animationDuration = 2
+            throwView.animationRepeatCount = 1
+            throwView.startAnimating()
+
             if(Int(randomNumInt)<=catchRate*2){
                 savePokemon("GoldenDragonPirate", caught: true)
                 displayAlert("Catch 'em All", error: "GoldenDragonPirate was caught!")
@@ -68,7 +97,16 @@ class EncounterViewController: UIViewController{
             }
             break;
         case "quad":
-            if(Int(randomNumInt)<=catchRate/2){
+                throwView.animationImages = [
+                    UIImage(named: "images/poke1.png")!,
+                    UIImage(named: "images/poke2.png")!,
+                    UIImage(named: "images/poke3.png")!
+                ]
+                if(Int(randomNumInt)<=catchRate/2){
+                throwView.animationDuration = 2
+                throwView.animationRepeatCount = 1
+                throwView.startAnimating()
+
                 savePokemon("Snorlax", caught: true)
                 displayAlert("Catch 'em All", error: "Snorlax was caught!")
             }else{
