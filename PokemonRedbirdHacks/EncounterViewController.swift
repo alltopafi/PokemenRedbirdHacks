@@ -207,15 +207,19 @@ class EncounterViewController: UIViewController{
         switch locationString {
         case "everest":
             imageView.image=UIImage(named: "everest")
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "images/backgroundEverest.png")!)
             break;
         case "pompeii":
             imageView.image=UIImage(named: "pompeii")
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "images/backgroundPompeii.png")!)
             break;
         case "japan":
             imageView.image=UIImage(named: "japan")
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "images/backgroundJapan.png")!)
             break;
         case "quad":
             imageView.image=UIImage(named: "quad")
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "images/backgroundQuad.png")!)
             break;
             
         default:
