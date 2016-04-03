@@ -17,6 +17,36 @@ class EncounterViewController: UIViewController{
 
     @IBOutlet weak var imageView: UIImageView!
 
+    @IBAction func pokeball(sender: AnyObject) {
+        caught = true
+        switch(locationString){
+        case "everest":
+            savePokemon("Articuno", caught: true)
+            displayAlert("Catch 'em All", error: "Articuno was caught!")
+            break;
+        case "pompeii":
+            savePokemon("Moltres", caught: true)
+            displayAlert("Catch 'em All", error: "Moltres was caught!")
+            break;
+        case "japan":
+            savePokemon("GoldenDragonPirate", caught: true)
+            displayAlert("Catch 'em All", error: "GoldenDragonPirate was caught!")
+            break;
+        case "quad":
+            savePokemon("Snorlax", caught: true)
+            displayAlert("Catch 'em All", error: "Snorlax was caught!")
+            break;
+            
+        default:
+            break;
+        }
+        
+        //transition back to map
+        
+
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -40,11 +70,37 @@ class EncounterViewController: UIViewController{
             break;
         case "quad":
             imageView.image=UIImage(named: "quad")
-            savePokemon("quad", caught: true)
             break;
             
         default:
             break;
+        }
+        
+        
+        
+        if(caught)
+        {
+            switch(locationString){
+            case "everest":
+                savePokemon("Articuno", caught: true)
+                break;
+            case "pompeii":
+                savePokemon("Moltres", caught: true)
+                break;
+            case "japan":
+                savePokemon("GoldenDragonPirate", caught: true)
+                break;
+            case "quad":
+                savePokemon("Snorlax", caught: true)
+                break;
+                
+            default:
+                break;
+            }
+            
+            
+            
+            
         }
         
         
@@ -70,37 +126,28 @@ class EncounterViewController: UIViewController{
             
         }
         
-        
-        
-        
-        
-//        let newPoke = pokemon(name: name,caught: caught)
-//        var pokemonArray = NSUserDefaults.standardUserDefaults().objectForKey("pokemon") as? [pokemon]
-////        if let pokemonData = NSUserDefaults.standardUserDefaults().objectForKey("pokemon") as? NSData{
-////            
-////            if var pokemonArray = NSKeyedUnarchiver.unarchiveObjectWithData(pokemonData) as? [pokemon] {
-////                
-//        
-//        pokemonArray?.append(newPoke)
-//                NSUserDefaults.standardUserDefaults().setObject(pokemonArray, forKey: "pokemon")
-//                NSUserDefaults.standardUserDefaults().synchronize()
-////            }
-////            
-//        }
     }
     
-//        var pokemonArray  = [pokemon]()
-//        pokemonArray.append(newPoke)
+//    internal class Alert: NSObject {
 //        
-//        //error here
-//        //let pokemonData = NSKeyedArchiver.archivedDataWithRootObject(pokemonArray)
-//        let myData = NSKeyedArchiver.archivedDataWithRootObject(newPoke)
-//        NSUserDefaults.standardUserDefaults().setObject(myData, forKey: "pokemon")
-
+//        class func Warning(delegate: UIViewController, message: String) {
+//            let alert = UIAlertController(title: "Warning", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+//            delegate.presentViewController(alert, animated: true, completion: nil)
+//        }
+//        
+//    }
+    
+    
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    func displayAlert(title:String, error: String){
+        let alert = UIAlertController(title: title, message: error, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
+            self.navigationController?.popToRootViewControllerAnimated(true)
+//(true, completion: nil)
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
         
-        //print("here -------------")
-        //NSUserDefaults.standardUserDefaults().setObject(pokemonData, forKey: "pokemon")
-    
-    
-
+    }
 }
